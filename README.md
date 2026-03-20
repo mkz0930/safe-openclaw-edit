@@ -4,6 +4,38 @@
 
 ---
 
+## ⚡ 一键安装
+
+在你的 OpenClaw Agent 中发送以下指令：
+
+```
+安装这个 skill：https://github.com/mkz0930/safe-openclaw-edit
+```
+
+或者手动安装：
+
+```bash
+# 克隆到 skills 目录
+git clone https://github.com/mkz0930/safe-openclaw-edit.git \
+  ~/.openclaw/workspace/skills/safe-openclaw-edit
+
+# 复制脚本到 scripts 目录
+cp ~/.openclaw/workspace/skills/safe-openclaw-edit/scripts/* \
+  ~/.openclaw/workspace/scripts/
+
+# 添加执行权限
+chmod +x ~/.openclaw/workspace/scripts/safe-edit-openclaw.sh \
+  ~/.openclaw/workspace/scripts/openclaw-health-check.sh \
+  ~/.openclaw/workspace/scripts/openclaw-restart-safe.sh
+
+# 验证安装
+bash ~/.openclaw/workspace/scripts/safe-edit-openclaw.sh check
+```
+
+安装成功后输出：`✅ JSON 格式合法`
+
+---
+
 ## 这个工具解决什么问题？
 
 OpenClaw 的所有设置都存在一个文件里：`~/.openclaw/openclaw.json`
